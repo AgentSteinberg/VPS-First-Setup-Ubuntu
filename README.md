@@ -1,7 +1,7 @@
 # Setting up your first Ubuntu VPS
 This Tutorial shows you how to secure your VPS (Virtual Private Server). It is crucial to follow the best practices because you don't want to have a malicious actor in your account. 
 
-Tested with Ubuntu 18.04.
+Tested with Ubuntu 20.04.
 
 First we want to check that our VPS host provides a console login without ssh. This is important because if we lock ouself out we lose the access to our VPS. **Warning**. Take this serious. You don't want to lock yourself out. If you mess up this configuration you can no longer access via ssh. No guarantee for this! And no guarantee for the tutorial. But it's not rocket science. 
 I tested it on two different devices without conflicts.
@@ -62,7 +62,6 @@ That is because the user <root> is the superuser. Think of it as the admin of th
 **Don't just copy this command!** Change the field <yournewuser> to something of your choice. It is just a name. But better don't use your clear name. Bots are using common names from the country to try to login into your VPS. So be creative! And use lower case letters. (The name should match the regular expression defined in the /etc/adduser.conf and is usually NAME_REGEX="^[a-z][-a-z0-9_]*\$" . If you don't understand this - just use lowercase.)
 ```
 adduser <yournewuser>
-
 ```
 It will be prompted to first enter the password of the current user and then to choose a password for <yournewuser>. Please choose a **strong password** and safe it in your password manager.(If you don't have one - go get it. You need it in crypto. But after this tutorial.) Make sure you don't loose it. There is no need to fill in the information like name, room ....just leave it blank. 
 
